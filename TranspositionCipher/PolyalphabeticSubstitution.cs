@@ -38,6 +38,7 @@ namespace TranspositionCipher
                     if(i>=input.Length) break;
                 }
             }
+            FileWrittng.WriteFile("Полиалфавитная подстановка", "Шифрование", key.ToString(), input, result);
             return result;
         }
 
@@ -56,6 +57,7 @@ namespace TranspositionCipher
                     }
                 }
             }
+            FileWrittng.WriteFile("Полиалфавитная подстановка", "Дешифрование", key.ToString(), input, result);
             return result;
         }
 

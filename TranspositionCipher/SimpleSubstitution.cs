@@ -32,10 +32,10 @@ namespace TranspositionCipher
             for (int i = 0; i < input.Length; i ++)
             {
                 int unicode = (int)(input[i]) + key;
-                if (unicode >= 256) unicode -= 256;
                 result += (char)unicode;
             }
 
+            FileWrittng.WriteFile("Простая подстановка", "Шифрование", key.ToString(), input, result);
             return result;
         }
 
@@ -46,10 +46,10 @@ namespace TranspositionCipher
             for (int i = 0; i < input.Length; i++)
             {
                 int unicode = (int)(input[i]) - key;
-                if (unicode <0) unicode += 256;
                 result += (char)unicode;
             }
 
+            FileWrittng.WriteFile("Простая подстановка", "Дешифрование", key.ToString(), input, result);
             return result;
         }
     }
